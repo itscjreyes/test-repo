@@ -86,15 +86,19 @@ There are several different plugins we can use to help automate our workflow. We
 Install these plugins by running the following commands:
 
 *Sass compiler*
+
       npm install gulp-sass gulp-concat --save-dev
 
 *Autoprefixer*
+
       npm install gulp-autoprefixer --save-dev
 
 *Babel*
+
       npm install gulp-babel babel-preset-es2015 --save-dev
 
 *Browsersync*
+
       npm install browser-sync --save-dev
 
 In your __gulpfile.js__ file, enter the following code:
