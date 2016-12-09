@@ -58,11 +58,13 @@
 
 By developing locally, we are able to automate our workflow with Gulp.
 
-To install Gulp on your system (this will only need to be done once per computer), type the following commands in the command line:
+To install Gulp on your system (this will only need to be done once per computer), first check to see if Node is installed and what version you have. Run the following command in the command line:
 
     node -v
 
-**
+To install Node, download it from [Node.js](https://nodejs.org/en/).
+
+Next, install Gulp on your system by running this command:
 
     npm install gulp -g
 
