@@ -1,7 +1,6 @@
-- [SalesHub - Development Styleguide](#)
-  - [HubSpot Local Server](#)
-    - [Local File Structure for Gulp](#)
-    - [FTP Transfer](#)
+- [HubSpot Local Server](#hubspot-local-server)
+  - [Local File Structure for Gulp](#local-file-structure-for-gulp)
+  - [FTP](#ftp)
 
 #SalesHub - Development Styleguide
 
@@ -48,7 +47,7 @@
                           |--password-pages
                           |--subscription-preferences
 
-###FTP Transfer
+###FTP
 
 1. Connect to FTP:
   - __Host__: ftp.hubapi.com
