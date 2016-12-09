@@ -1,6 +1,6 @@
 #SalesHub - Development Styleguide
 
-##HUBSPOT LOCAL SERVER
+##HubSpot Local Server
 
 ###Local File Structure for Gulp
 
