@@ -58,9 +58,10 @@
 
 By developing locally, we are able to automate our workflow with Gulp.
 
-To install Gulp on your system (this will only need to be done once), type the following commands in the command line:
+To install Gulp on your system (this will only need to be done once per computer), type the following commands in the command line:
 
     node -v
+
 
     npm install gulp -g
 
@@ -85,16 +86,16 @@ There are several different plugins we can use to help automate our workflow. We
 Install these plugins by running the following commands:
 
 *Sass compiler*
-    npm install gulp-sass gulp-concat --save-dev
+      npm install gulp-sass gulp-concat --save-dev
 
 *Autoprefixer*
-    npm install gulp-autoprefixer --save-dev
+      npm install gulp-autoprefixer --save-dev
 
 *Babel*
-    npm install gulp-babel babel-preset-es2015 --save-dev
+      npm install gulp-babel babel-preset-es2015 --save-dev
 
 *Browsersync*
-    npm install browser-sync --save-dev
+      npm install browser-sync --save-dev
 
 In your __gulpfile.js__ file, enter the following code:
 
