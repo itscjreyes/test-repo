@@ -63,6 +63,7 @@ To install Gulp on your system (this will only need to be done once per computer
     node -v
 
 
+
     npm install gulp -g
 
 To initialize Gulp in a project (this will need to be done once for each project), go to the theme (__vast__) folder and type the following command:
@@ -87,19 +88,19 @@ Install these plugins by running the following commands:
 
 *Sass compiler*
 
-      npm install gulp-sass gulp-concat --save-dev
+    npm install gulp-sass gulp-concat --save-dev
 
 *Autoprefixer*
 
-      npm install gulp-autoprefixer --save-dev
+    npm install gulp-autoprefixer --save-dev
 
 *Babel*
 
-      npm install gulp-babel babel-preset-es2015 --save-dev
+    npm install gulp-babel babel-preset-es2015 --save-dev
 
 *Browsersync*
 
-      npm install browser-sync --save-dev
+    npm install browser-sync --save-dev
 
 In your __gulpfile.js__ file, enter the following code:
 
