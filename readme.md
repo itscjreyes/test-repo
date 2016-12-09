@@ -1,11 +1,12 @@
 #SalesHub - Development Styleguide
 
-- [Local Development](#local-development)
-  - [Local File Structure for Gulp](#local-file-structure-for-gulp)
-  - [Gulp](#gulp)
-    - [Installing Gulp](#installing-gulp)
-    - [Gulp Plugins](#gulp-plugins)
-  - [FTP](#ftp)
+[Local Development](#local-development)
+  [Local File Structure for Gulp](#local-file-structure-for-gulp)
+  [Gulp](#gulp)
+    [Installing Gulp](#installing-gulp)
+    [Gulp Plugins](#gulp-plugins)
+    [Starting Gulp](#starting-gulp)
+  [FTP](#ftp)
 
 ##Local Development
 
@@ -52,6 +53,8 @@
                           |--password-pages
                           |--subscription-preferences
 
+The main files you will work on will be any HTML pages located in the __blog__, __email__, or __page__ folders, as well as the Sass and JS files located in the __dev__ folder.
+
 ###Gulp
 
 ####Installing Gulp
@@ -84,7 +87,7 @@ Run the following command to install Gulp in the project folder:
 
 ####Gulp Plugins
 
-There are several different plugins we can use to help automate our workflow. We will be using a Sass compiler, autoprefixer, ES6 to ES5 transpiler, and live reload tool called Browsersync.
+There are several different plugins we can use to help automate our workflow. We will be using a Sass compiler, autoprefixer, ES6 to ES5 transpiler, and a live reload tool called Browsersync.
 
 Install these plugins by running the following commands:
 
@@ -147,6 +150,18 @@ gulp.task('browser-sync', function() {
 
 gulp.task('default', ['browser-sync','styles','scripts','watch']);
 ```
+
+####Starting Gulp
+
+To run Gulp, first start the Local Hubl Server in the command line:
+
+    [your path]/local-hubl-server/bin/local-hubl-server
+
+In a new terminal window, navigate to the theme (__vast__) folder, then run the following command:
+
+    gulp
+
+A browser window will open at http://localhost: 3000. You are now free to develop locally! Gulp will compile your Sass files, check for any errors, and automatically reload the page when you save any changes.
 
 ###FTP
 
