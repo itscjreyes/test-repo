@@ -1,7 +1,8 @@
-#HUBSPOT LOCAL SERVER#
----
+#SalesHub - Development Styleguide
 
-##Local File Structure for Gulp##
+##HUBSPOT LOCAL SERVER
+
+###Local File Structure for Gulp
 
 The local directory in order for Gulp to work:
 
@@ -44,7 +45,7 @@ The local directory in order for Gulp to work:
                           |--password-pages
                           |--subscription-preferences
 
-##FTP Transfer
+###FTP Transfer
 
 1. Connect to FTP:
   - __Host__: ftp.hubapi.com
