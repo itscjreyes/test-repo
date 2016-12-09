@@ -1,12 +1,17 @@
-- [HubSpot Local Server](#hubspot-local-server)
-  - [Local File Structure for Gulp](#local-file-structure-for-gulp)
-  - [FTP](#ftp)
-
 #SalesHub - Development Styleguide
 
-##HubSpot Local Server
+- [Local Development](#local-development)
+  - [Local File Structure for Gulp](#local-file-structure-for-gulp)
+  - [Gulp](#gulp)
+    - [Installing Gulp](#installing-gulp)
+    - [Gulp Plugins](#gulp-plugins)
+  - [FTP](#ftp)
 
-###Local File Structure for Gulp
+##Local Development
+
+###Local File Structure
+
+*__Note:__* Maintaining this file structure is important for the Gulp code below to work.
 
         |--local-hubl-server
            |--bin
@@ -46,6 +51,94 @@
                           | *This includes global modules such as "header.html"*
                           |--password-pages
                           |--subscription-preferences
+
+###Gulp
+
+####Installing Gulp
+
+By developing locally, we are able to automate our workflow with Gulp.
+
+To install Gulp on your system (this will only need to be done once), type the following commands in the command line:
+
+    node -v
+
+    npm install gulp -g
+
+To initialize Gulp in a project (this will need to be done once for each project), go to the theme (__vast__) folder and type the following command:
+
+    npm init
+
+This will create a __package.json__ file.
+
+Next, create a Gulp file:
+
+    touch gulpfile.js
+
+Run the following command to install Gulp in the project folder:
+
+    npm install gulp --save-dev
+
+####Gulp Plugins
+
+There are several different plugins we can use to help automate our workflow. We will be using a Sass compiler, autoprefixer, ES6 to ES5 transpiler, and live reload tool called Browsersync.
+
+Install these plugins by running the following commands:
+
+*Sass compiler*
+    npm install gulp-sass gulp-concat --save-dev
+
+*Autoprefixer*
+    npm install gulp-autoprefixer --save-dev
+
+*Babel*
+    npm install gulp-babel babel-preset-es2015 --save-dev
+
+*Browsersync*
+    npm install browser-sync --save-dev
+
+In your __gulpfile.js__ file, enter the following code:
+
+```javascript
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var concat = require('gulp-concat');
+var babel = require('gulp-babel');
+var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
+
+gulp.task('styles', function () {
+  return gulp.src('./custom/dev/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(concat('hs_default_custom_style.css'))
+    .pipe(gulp.dest('./custom/styles/default/'))
+    .pipe(reload({stream: true}));
+});
+
+gulp.task('scripts', function() {
+  return gulp.src('./custom/dev/*.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(gulp.dest('./custom/styles/default/'))
+    .pipe(reload({stream: true}));
+});
+
+gulp.task('watch', function() {
+  gulp.watch('./custom/dev/**/*.scss', ['styles']);
+  gulp.watch('./custom/dev/*.js', ['scripts']);
+  gulp.watch('./custom/**/**/*.html', reload);
+});
+
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    proxy: '127.0.0.1:8080'
+  })
+});
+
+gulp.task('default', ['browser-sync','styles','scripts','watch']);
+```
 
 ###FTP
 
