@@ -14,44 +14,44 @@
 
 *__Note:__* Maintaining this file structure is important for the Gulp code below to work.
 
-        |--local-hubl-server
-           |--bin
-           |--conf
-           |--docs
-           |--lib
-           |--work
-               |--hubthemes
-                 |--vast
-                    |--custom
-                       |--blog
-                       |--dev
-                          |--base
-                          | *Include base HubSpot, Foundation, etc SCSS partials*
-                          |--global
-                          | *Include global SCSS partials, such as "__header.scss", "__mediaQueries.scss"*
-                          |--pages
-                          | *Include partials for each page*
-                             |--[main.scss]
-                             | *This includes main variables and styles*
-                             |--[main.js]
-                             | *This is the working JS file. Note that $(window).load() may need to replace $(document).ready() during development in order for functions to work. This should be changed back in the final file.*
-                       |--email
-                       |--page
-                          |--landing-page-basic
-                          | *Include HTML files for landing page templates*
-                          |--web-page-basic
-                          | *Include HTML files for web page templates*
-                       |--styles
-                          |--default
-                             |--[hs__default__custom__style.css]
-                             |--[main.js]
-                             | *These are the final CSS/JS files to upload*
-                       |--system
-                          |--error-pages
-                          |--global
-                          | *This includes global modules such as "header.html"*
-                          |--password-pages
-                          |--subscription-preferences
+    |--local-hubl-server
+       |--bin
+       |--conf
+       |--docs
+       |--lib
+       |--work
+           |--hubthemes
+             |--vast
+                |--custom
+                   |--blog
+                   |--dev
+                      |--base
+                      | *Include base HubSpot, Foundation, etc SCSS partials*
+                      |--global
+                      | *Include global SCSS partials, such as "__header.scss", "__mediaQueries.scss"*
+                      |--pages
+                      | *Include partials for each page*
+                         |--[main.scss]
+                         | *This includes main variables and styles*
+                         |--[main.js]
+                         | *This is the working JS file. Note that $(window).load() may need to replace $(document).ready() during development in order for functions to work. This should be changed back in the final file.*
+                   |--email
+                   |--page
+                      |--landing-page-basic
+                      | *Include HTML files for landing page templates*
+                      |--web-page-basic
+                      | *Include HTML files for web page templates*
+                   |--styles
+                      |--default
+                         |--[hs__default__custom__style.css]
+                         |--[main.js]
+                         | *These are the final CSS/JS files to upload*
+                   |--system
+                      |--error-pages
+                      |--global
+                      | *This includes global modules such as "header.html"*
+                      |--password-pages
+                      |--subscription-preferences
 
 The main files you will work on will be any HTML pages located in the __blog__, __email__, or __page__ folders, as well as the Sass and JS files located in the __dev__ folder.
 
@@ -157,11 +157,13 @@ To run Gulp, first start the Local Hubl Server in the command line:
 
     [your path]/local-hubl-server/bin/local-hubl-server
 
+This will open http://localhost:8080 in your browser. However, because we want to use Gulp, we need to run it at the same time.
+
 In a new terminal window, navigate to the theme (__vast__) folder, then run the following command:
 
     gulp
 
-A browser window will open at http://localhost: 3000. You are now free to develop locally! Gulp will compile your Sass files, check for any errors, and automatically reload the page when you save any changes.
+This will open http://localhost:3000 in your browser. You are now free to develop locally! Gulp will compile your Sass files, check for any errors, and automatically reload the page when you save any changes to your HTML, SCSS, and JS files.
 
 ###FTP
 
