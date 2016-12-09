@@ -4,8 +4,6 @@
 
 ###Local File Structure for Gulp
 
-The local directory in order for Gulp to work:
-
         |--local-hubl-server
            |--bin
            |--conf
