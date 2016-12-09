@@ -1,12 +1,12 @@
 #SalesHub - Development Styleguide
 
--[Local Development](#local-development)
-  -[Local File Structure for Gulp](#local-file-structure-for-gulp)
-  -[Gulp](#gulp)
-    -[Installing Gulp](#installing-gulp)
-    -[Gulp Plugins](#gulp-plugins)
-    -[Starting Gulp](#starting-gulp)
-  -[FTP](#ftp)
+- [Local Development](#local-development)
+  - [Local File Structure for Gulp](#local-file-structure-for-gulp)
+  - [Gulp](#gulp)
+    - [Installing Gulp](#installing-gulp)
+    - [Gulp Plugins](#gulp-plugins)
+    - [Starting Gulp](#starting-gulp)
+  - [FTP](#ftp)
 
 ##Local Development
 
